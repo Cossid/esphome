@@ -67,11 +67,7 @@ class SM2135 : public Component {
 
  protected:
   void set_channel_value_(uint8_t channel, uint8_t value);
-  void sm2135_set_low_(GPIOPin *pin);
-  void sm2135_set_high_(GPIOPin *pin);
-
-  void sm2135_start_();
-  void sm2135_stop_();
+  void write_bit_(bool value);
   void write_byte_(uint8_t data);
   void write_buffer_(uint8_t *buffer, uint8_t size);
 
